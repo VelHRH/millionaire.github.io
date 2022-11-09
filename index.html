@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dist/output.css" />
+  <title>Millionaire</title>
+ </head>
+ <body>
+  <div class="popLayer"></div>
+  <div id="popBox">
+   <div id="popText">Поздравляем!</div>
+   <button id="closeBtn">Закрыть</button>
+  </div>
+  <div
+   class="bg-gradient-to-r from-violet-500 to-violet-900 w-full h-screen flex flex-col"
+  >
+   <div class="h-1/2 w-full flex">
+    <div class="h-full w-1/6 flex flex-col">
+     <div id="help50cont" class="w-full h-1/3 p-5">
+      <div
+       id="help50"
+       class="text-slate-50 w-full font-bold text-center cursor-pointer hover:text-slate-300"
+      >
+       50/50
+      </div>
+     </div>
+     <div class="w-full h-1/3 p-5">
+      <div
+       id="helpFriend"
+       class="text-slate-50 w-full font-bold text-center cursor-pointer hover:text-slate-300"
+      >
+       Друг
+      </div>
+     </div>
+     <div class="w-full h-1/3 p-5">
+      <div
+       id="helpMistake"
+       class="text-slate-50 w-full font-bold text-center cursor-pointer hover:text-slate-300"
+      >
+       Помилка
+      </div>
+     </div>
+    </div>
+    <div class="h-full w-2/3 flex flex-col">
+     <div class="h-1/2 text-slate-50 text-9xl w-full text-center">
+      Мільйонер
+     </div>
+     <div
+      class="w-full h-1/2 p-5"
+      style="background: #4e2e98; border-radius: 30px"
+     >
+      <div
+       id="question"
+       class="text-yellow-300 w-full h-full text-center font-semibold"
+       style="margin-top: 10px; font-size: 30px"
+      ></div>
+     </div>
+    </div>
+    <div class="h-full w-1/6 flex flex-col font-bold">
+     <div class="w-full h-1/3 p-5 flex text-slate-50 text-4xl text-center">
+      Питання:
+      <div id="qNumber" class="w-full h-full ml-2"></div>
+     </div>
+     <div class="w-full h-1/3 p-5 flex text-slate-50 text-2xl text-center">
+      Сума:
+      <div id="qSum" class="w-full h-full ml-2"></div>
+     </div>
+     <div class="w-full h-1/3 p-5 flex">
+      <button
+       id="NObtn"
+       class="w-1/2 h-full rounded-lg text-3xl bg-slate-500 px-2 text-center font-semibold text-slate-50"
+      >
+       Завершити
+      </button>
+      <button
+       id="YESbtn"
+       class="w-1/2 h-full rounded-lg text-3xl bg-slate-500 px-2 text-center font-semibold text-slate-50 hover:bg-green-500"
+      >
+       Продовжити
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="h-1/2 w-full flex flex-wrap font-bold">
+    <div class="w-1/2 h-1/2 p-5">
+     <div
+      id="qAcont"
+      class="text-slate-50 w-full h-full flex items-center cursor-pointer hoverClass1"
+     >
+      <div class="text-6xl">A)</div>
+      <div id="qA" class="text-6xl" style="margin-left: 5px"></div>
+     </div>
+    </div>
+    <div class="w-1/2 h-1/2 p-5">
+     <div
+      id="qBcont"
+      class="text-slate-50 w-full h-full flex items-center cursor-pointer hoverClass1"
+     >
+      <div class="text-6xl">B)</div>
+      <div id="qB" class="text-6xl" style="margin-left: 5px"></div>
+     </div>
+    </div>
+    <div class="w-1/2 h-1/2 p-5">
+     <div
+      id="qCcont"
+      class="text-slate-50 w-full h-full flex items-center cursor-pointer hoverClass1"
+     >
+      <div class="text-6xl">C)</div>
+      <div id="qC" class="text-6xl" style="margin-left: 5px"></div>
+     </div>
+    </div>
+    <div class="w-1/2 h-1/2 p-5">
+     <div
+      id="qDcont"
+      class="text-slate-50 w-full h-full flex items-center cursor-pointer hoverClass1"
+     >
+      <div class="text-6xl">D)</div>
+      <div id="qD" class="text-6xl" style="margin-left: 5px"></div>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div id="calculator" style="width: 530px; font-family: monospace">
+   <div
+    id="screen"
+    style="
+     background-color: aquamarine;
+     color: black;
+     text-align: right;
+     height: 100px;
+     padding-right: 23px;
+     overflow: hidden;
+    "
+   ></div>
+   <div id="btn7">7</div>
+   <div id="btn8">8</div>
+   <div id="btn9">9</div>
+   <div id="btnDiv">/</div>
+   <div id="btnCE">CE</div>
+   <div id="btn4">4</div>
+   <div id="btn5">5</div>
+   <div id="btn6">6</div>
+   <div id="btnMod">%</div>
+   <div id="btnC">C</div>
+   <div id="btn1">1</div>
+   <div id="btn2">2</div>
+   <div id="btn3">3</div>
+   <div id="btnMinus">-</div>
+   <div id="btnMult">*</div>
+   <div id="btn0">0</div>
+   <div id="btnDot">.</div>
+   <div id="btnPlus">+</div>
+   <div id="btnIs">=</div>
+  </div>
+
+  <div id="randomizer">
+   <div class="inputArea">
+    <label for="begN">Початок діапазону:</label>
+    <input type="number" id="begN" />
+    <label for="endN">Кінець діапазону:</label>
+    <input type="number" id="endN" />
+    <label for="numb">Кількість чисел:</label>
+    <input type="number" id="numb" value="1" min="1" />
+    <input type="button" id="OKbtn" value="OK" />
+   </div>
+   <textarea id="resRand"></textarea>
+  </div>
+ </body>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script type="module" src="./src/game.js"></script>
+ <script type="module" src="./src/calculator.js"></script>
+ <script type="module" src="./src/random.js"></script>
+</html>
